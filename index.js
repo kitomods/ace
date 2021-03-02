@@ -24,7 +24,6 @@ const { bahasa } = require('./src/bahasa')
 const { negara } = require('./src/kodenegara')
 const { virtex } = require('./src/virtex')
 const { fetchJson } = require('./lib/fetcher')
-const { tag } = require('./src/tag')
 const { menulinks } = require('./src/menulinks')
 const { recognize } = require('./lib/ocr')
 /******END OF FILE INPUT******/
@@ -55,6 +54,7 @@ const _level = JSON.parse(fs.readFileSync('./database/json/level.json'))
 
 /******BEGIN OF MENU INPUT******/
 const { help } = require('./src/help')
+const { tag } = require('./src/tag')
 const { logomaker } = require('./database/menu/logomaker')
 const { kitomenu } = require('./src/kitomenu')
 const { menuadmin } = require('./src/menuadmin')
