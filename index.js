@@ -200,7 +200,7 @@ async function starts() {
 				} catch {
 					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 				}
-				teks = `iae @${num.split('@')[0]}\nbelo nick imagina com a nossa tag\n Tag: '\n\nExemplo: '  -  ' \n\nRecado:    �,       *${mdata.subject}*`
+				teks = `iae @${num.split('@')[0]}\n bem vindo a ${mdata.subject}\n para pegar a tag digite ${prefix}tag`
 				let buff = await getBuffer(ppimg)
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 			} else if (anu.action == 'remove') {
@@ -788,7 +788,7 @@ async function starts() {
                                      if (!isUser) return reply(mess.only.daftarB)
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 					linkgc = await client.groupInviteCode (from)
-					yeh = `' |  \n\n      -,   � ,  ,    \n\n   ,    ,    ,    \n\n   �,      \n\nhttps://chat.whatsapp.com/${linkgc}`
+					yeh = `https://chat.whatsapp.com/${linkgc}`
 					client.sendMessage(from, yeh, text, {quoted: mek, detectLinks: false})
 					break
 				case 'ocr':
@@ -811,7 +811,7 @@ async function starts() {
 					break
              case 'tag':
 					if (!isGroup) return reply(mess.only.group)
-					client.sendMessage(from, menulinks(prefix, sender), text, {quoted: mek})
+					client.sendMessage(from, tag(prefix, sender), text, {quoted: mek})
 				  break
 		    case 'menulinks':
 					if (!isGroup) return reply(mess.only.group)
