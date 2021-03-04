@@ -812,7 +812,7 @@ async function starts() {
 					break
 					case 'base':
 					if (!isGroup) return reply(mess.only.group)
-					client.sendMessage(from, basesam(prefix, sender), text, {quoted: mek})
+					client.sendMessage(from, base(prefix, sender), text, {quoted: mek})
 				  break
 		   case 'apks':
 					if (!isGroup) return reply(mess.only.group)
