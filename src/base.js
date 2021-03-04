@@ -1,4 +1,4 @@
-const basesam = (prefix, pushname) => {
+const base = (prefix, pushname) => {
  return `
 ╔══════ஜ۩۞۩ஜ══════╗
   Sammods
@@ -55,4 +55,4 @@ http://www.mediafire.com/file/bpo260x8fca5dw2/WhatsApp_2.20.198.5..apk/file
 
 }
 
-exports.basesam = basesam
+exports.base = base
