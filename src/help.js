@@ -17,7 +17,7 @@ const help = (prefix) => {
   ❏${prefix}menulinks (agr ta com imunes novos)
 ◪ 𝗙𝗔𝗭𝗘𝗥
 
-▻${prefix}idiomas (idiomas do comando ${prefix}/tts)
+▻${prefix}idiomas (idiomas do comando ${prefix}tts)
 ▻${prefix}wiki (olha na wikipedia em indonesio)
 ▻${prefix}imagem (transforma fig em imagem)
 ▻${prefix}play (nome da musica q quer baixar)
