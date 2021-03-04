@@ -354,7 +354,7 @@ async function starts() {
 							case 'menuadmin':
 								client.sendMessage(from, menuadmin(prefix, sender), text, {quoted: mek})
 										break
-               case 'virtex':
+               case 'destrava':
                client.sendMessage(from, virtex(prefix, sender), text, {quoted: mek})
                break
 				case 'demote':
@@ -809,6 +809,14 @@ async function starts() {
 						reply('Foto aja mas')
 					}
 					break
+					case 'base':
+					if (!isGroup) return reply(mess.only.group)
+					client.sendMessage(from, basesam(prefix, sender), text, {quoted: mek})
+				  break
+		   case 'apks':
+					if (!isGroup) return reply(mess.only.group)
+					client.sendMessage(from, apks(prefix, sender), text, {quoted: mek})
+				  break
              case 'tag':
 					if (!isGroup) return reply(mess.only.group)
 					client.sendMessage(from, tag(prefix, sender), text, {quoted: mek})
