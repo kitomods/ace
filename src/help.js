@@ -2,7 +2,6 @@ const help = (prefix) => {
 	return `
    𝐖𝐞𝐡𝐫𝐦𝐚𝐜𝐡𝐭'𝐗𝐒 | ϟϟ 
    ${prefix}tag
-   ${prefix}link
 𝗽𝗮𝗿𝗮 𝘂𝘀𝗮𝗿 𝗼 𝗯𝗼𝘁, 𝗺𝗮𝗻𝗱𝗮 ${prefix}𝗿𝗴 (𝗻𝗶𝗰𝗸)
 
 ◪ 𝗜𝗡𝗙𝗢𝗥𝗠𝗔𝗖𝗢𝗘𝗦
@@ -35,6 +34,7 @@ const help = (prefix) => {
 ▻${prefix}simi (texto)
 ▻${prefix}destrava
 ▻${prefix}listadm
+▻${prefix}link
      `
 }
 
