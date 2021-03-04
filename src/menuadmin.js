@@ -1,5 +1,5 @@
 const menuadmin = (prefix, pushname) => {
- return `    K҉ I҉T҉O҉B҉O҉T҉  D҉O҉M҉IN҉A҉
+ return `   𝐖𝐞𝐡𝐫𝐦𝐚𝐜𝐡𝐭'𝐗𝐒 | ϟϟ 
  da adm pro bot faz isso
  
  ◪ COMANDO DOS ADMINS
