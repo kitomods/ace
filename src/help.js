@@ -24,13 +24,16 @@ const help = (prefix) => {
 ▻${prefix}play (nome da musica q quer baixar)
 ▻${prefix}ytmp4 (link do yt pra baixar o video)
 ▻${prefix}tts (pt) (texto q vc quer q fale)
+▻${prefix}apks (apks pra modificar zap)
 ▻${prefix}memeindo (meme em ingles)
 ▻${prefix}fig (imagem ou gif ate 6 seg)
+▻${prefix}base (base pra fazer zap)
 ▻${prefix}wame (link pro seu chat)
 ▻${prefix}wikien (tbm n sei oq faz)
 ▻${prefix}meme (a msm coisa)
 ▻${prefix}virtex (sla oq faz)
 ▻${prefix}simi (texto)
+▻${prefix}destrava
 ▻${prefix}listadm
      `
 }
