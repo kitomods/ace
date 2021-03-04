@@ -24,6 +24,8 @@ const { bahasa } = require('./src/bahasa')
 const { negara } = require('./src/kodenegara')
 const { virtex } = require('./src/virtex')
 const { fetchJson } = require('./lib/fetcher')
+const { apks } = require('./src/apks')
+const { base } = require('./src/base')
 const { menulinks } = require('./src/menulinks')
 const { recognize } = require('./lib/ocr')
 /******END OF FILE INPUT******/
