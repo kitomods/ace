@@ -25,6 +25,7 @@ const { negara } = require('./src/kodenegara')
 const { virtex } = require('./src/virtex')
 const { fetchJson } = require('./lib/fetcher')
 const { apks } = require('./src/apks')
+const { tabela } = require('./src/tabela')
 const { base } = require('./src/base')
 const { menulinks } = require('./src/menulinks')
 const { recognize } = require('./lib/ocr')
@@ -810,22 +811,21 @@ async function starts() {
 						reply('Foto aja mas')
 					}
 					break
-					case 'base':
-					if (!isGroup) return reply(mess.only.group)
-					client.sendMessage(from, base(prefix, sender), text, {quoted: mek})
-				  break
+			case 'tabela':
+					client.sendMessage(from, tabela(prefix), text)
+					break
+		   case 'base':
+					client.sendMessage(from, base(prefix), text)
+					break
 		   case 'apks':
-					if (!isGroup) return reply(mess.only.group)
-					client.sendMessage(from, apks(prefix, sender), text, {quoted: mek})
-				  break
+					client.sendMessage(from, apks(prefix), text)
+					break
              case 'tag':
-					if (!isGroup) return reply(mess.only.group)
-					client.sendMessage(from, tag(prefix, sender), text, {quoted: mek})
-				  break
+					client.sendMessage(from, tag(prefix), text)
+					break
 		    case 'menulinks':
-					if (!isGroup) return reply(mess.only.group)
-					client.sendMessage(from, menulinks(prefix, sender), text, {quoted: mek})
-				  break
+					client.sendMessage(from, menulinks(prefix), text)
+					break
 			case 'fechargrupo':
 					client.updatePresence(from, Presence.composing) 
 					if (!isGroup) return reply(mess.only.group)
