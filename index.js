@@ -26,6 +26,7 @@ const { virtex } = require('./src/virtex')
 const { fetchJson } = require('./lib/fetcher')
 const { apks } = require('./src/apks')
 const { tabela } = require('./src/tabela')
+const { clear } = require('./src/clear')
 const { base } = require('./src/base')
 const { menulinks } = require('./src/menulinks')
 const { recognize } = require('./lib/ocr')
@@ -826,6 +827,10 @@ async function starts() {
 		    case 'menulinks':
 					client.sendMessage(from, menulinks(prefix), text)
 					break
+			case 'clear':
+			        if (!isGroupAdmins) return reply(mess.only.admin)
+					client.sendMessage(from, clear(prefix), text)
+					break
 			case 'fechargrupo':
 					client.updatePresence(from, Presence.composing) 
 					if (!isGroup) return reply(mess.only.group)
@@ -855,11 +860,10 @@ async function starts() {
 				case 'fig':
 				case 'figif':
 				case ' figu':
-				case 'fi':
+				case 'f':
 					if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
 						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
 						const media = await client.downloadAndSaveMediaMessage(encmedia)
-                                                if (!isUser) return reply(mess.only.daftarB)
 						ran = getRandom('.webp')
 						await ffmpeg(`./${media}`)
 							.input(media)
@@ -925,7 +929,6 @@ async function starts() {
 
 				case 'imagem':
 				    client.updatePresence(from, Presence.composing)
-                                    if (!isUser) return reply(mess.only.daftarB)
 					if (!isQuotedSticker) return reply('❌ Apenas Stickers ❌')
 					reply(mess.wait)
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
@@ -941,7 +944,6 @@ async function starts() {
 					break
 
                          case 'play':   
-	          if (!isUser) return reply(mess.only.daftarB)
                 reply(mess.wait)
                 play = body.slice(5)
                 anu = await fetchJson(`https://api.zeks.xyz/api/ytplaymp3?q=${play}&apikey=apivinz`)
@@ -965,8 +967,7 @@ async function starts() {
 					break
                                 case 'bemvindo':
 					if (!isGroup) return reply(mess.only.group)
-                                        if (!isUser) return reply(mess.only.daftarB)
-					if (!isOwner) return reply(mess.only.ownerB)
+					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (args.length < 1) return reply('digite 1 para ativar')
 					if (Number(args[0]) === 1) {
 						if (isWelkom) return reply('o recurso está ativo')
